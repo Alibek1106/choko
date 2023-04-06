@@ -1,0 +1,34 @@
+@use "../var/colors" as *;
+@use "../var/mixins" as *;
+
+.tabs{
+    background-color: $milk;
+
+    .tabs-wrapper{
+        display: flex;
+        justify-content: space-between;
+        font-weight: 500;
+        font-size: 18px;
+        color: $brown;
+
+        @include md{
+            font-size: 14px;
+        }
+
+        @include xsm{
+            font-size: 7px;
+        }
+
+        button{
+            padding: 10px 20px;
+        }
+
+        .active{
+            border-bottom: 5px solid $brown;
+
+            @include xsm{
+                border-bottom: 2px solid $brown;
+            }
+        }
+    }
+}
